@@ -69,17 +69,13 @@ map('n', '<leader>pa', function()
 end, { desc = 'copy full path of file' })
 
 -- Quick config editing
+map({ 'n', 'v' }, 'm', '%', { desc = 'easier matching' })
 map('n', '<leader>rc', ':e ~/.config/nvim/init.lua<CR>', { desc = 'Edit config' })
 map('n', '<leader>rq', ':e ~/.config/nvim/cheatsheets/sqlite_cheatsheet.md<CR>', { desc = 'SQL cheathseet' })
 
 map('n', '<leader><leader>x', '<cmd>source %<CR>')
 
 map('i', 'jk', '<Right>', { desc = 'exit parenthesis' })
-
-map('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-map('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-map('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-map('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 map('n', 'n', "'Nn'[v:searchforward].'zv'", { expr = true, desc = 'Next Search Result' })
 map('x', 'n', "'Nn'[v:searchforward]", { expr = true, desc = 'Next Search Result' })
