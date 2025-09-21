@@ -116,6 +116,7 @@ end, { desc = 'files or buffers' })
 map('n', '<leader>fi', [[<Cmd>lua require"fzf-lua".builtin()<CR>]], {})
 
 map('n', '<leader>vc', [[<Cmd>CsvViewToggle delimiter=, quote_char=' comment=# display_mode=border<CR>]])
+map('n', '<leader>vt', ':TypstPreview<CR>')
 
 -- Function to close buffer but keep tab if it's the only buffer in tab
 map('n', '<leader>bd', ':bdelete!<CR>', { desc = 'delete buffer' })
