@@ -1,0 +1,15 @@
+
+{
+  "sstr": {
+    "prefix": "sstr",
+    "body": [
+      "std::cout << \"${1:string} \" << ${2:variable} << \"\\n\";"
+    ]
+  },
+  "slog": {
+    "prefix": "slog",
+    "body": [
+      "std::cout << \"${3:string} \" << ${1:obj}.${2:method} << \"\\n\";"
+    ]
+  }
+}

@@ -5,6 +5,8 @@ vim.opt_local.softtabstop = 2
 
 vim.keymap.set('n', '<leader>sf', function()
   vim.cmd 'w'
-  vim.cmd '!g++ %'
-  vim.cmd '!./a.out'
-end)
+  local compile_cmd = '!echo "" && g++ % -o %< && ./%<'
+  vim.cmd(compile_cmd)
+end, { desc = 'Save, Compile (g++), and Run C++' })
+
+vim.keymap.set('n', '<leader>is', 'ostd::cout << "TEXT "<< <<"\\n"; <esc>5bce')
