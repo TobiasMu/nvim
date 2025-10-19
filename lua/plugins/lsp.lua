@@ -209,6 +209,7 @@ return {
           },
           root_dir = function(fname)
             return require('lspconfig.util').root_pattern(
+              '.clangd',
               'Makefile',
               'configure.ac',
               'configure.in',

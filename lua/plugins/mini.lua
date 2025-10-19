@@ -5,6 +5,7 @@ return {
     require('mini.ai').setup()
     require('mini.pairs').setup()
     require('mini.move').setup()
+    require('mini.diff').setup()
     require('mini.jump').setup()
     require('mini.jump2d').setup()
     require('mini.surround').setup {
