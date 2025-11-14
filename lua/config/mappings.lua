@@ -1,7 +1,6 @@
 local map = vim.keymap.set
 -- map("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 map('n', ';', ':', { desc = 'CMD enter command mode' })
-map('i', 'jk', '<ESC>')
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 map('n', '<C-h>', '<C-w>h', { desc = 'switch window left' })
@@ -13,9 +12,9 @@ map('n', '<Esc>', '<cmd>noh<CR>', { desc = 'general clear highlights' })
 
 map('n', 'YY', '<cmd>%y+<CR>', { desc = 'general copy whole file' })
 
-map('n', '<leader>n', '<cmd>set nu!<CR>', { desc = 'toggle line number' })
-map('n', '<leader>rn', '<cmd>set rnu!<CR>', { desc = 'toggle relative number' })
-map('n', '<leader>ch', '<cmd>NvCheatsheet<CR>', { desc = 'toggle nvcheatsheet' })
+map('n', '<leader>tn', '<cmd>set nu!<CR>', { desc = 'toggle line number' })
+map('n', '<leader>trn', '<cmd>set rnu!<CR>', { desc = 'toggle relative number' })
+map('n', '<leader>tch', '<cmd>NvCheatsheet<CR>', { desc = 'toggle nvcheatsheet' })
 
 map({ 'n', 'x' }, '<leader>cf', function()
   require('conform').format { lsp_fallback = true }
@@ -50,7 +49,8 @@ map('n', '<leader>/', 'gcc', { desc = 'toggle comment', remap = true })
 map('v', '<leader>/', 'gc', { desc = 'toggle comment', remap = true })
 --aa
 -- nvimtree
-map('n', '<leader>e', ':Explore<CR>', { desc = 'nvimtree focus window' })
+-- map('n', '<leader>e', ':Explore<CR>', { desc = 'nvimtree focus window' })
+map('n', '<leader>e', '<cmd>Oil<cr>')
 
 -- terminal
 map('t', '<C-x>', '<C-\\><C-N>', { desc = 'terminal escape terminal mode' })
