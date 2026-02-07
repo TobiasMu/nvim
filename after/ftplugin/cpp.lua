@@ -5,7 +5,7 @@ vim.opt_local.softtabstop = 2
 
 vim.keymap.set('n', '<leader>sf', function()
   vim.cmd 'w'
-  local compile_cmd = '!echo "" && g++ % -o %< && ./%<'
+  local compile_cmd = '!echo "" && g++ -std=c++17 % -o %< && ./%<'
   vim.cmd(compile_cmd)
 end, { desc = 'Save, Compile (g++), and Run C++' })
 

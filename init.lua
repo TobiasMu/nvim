@@ -9,6 +9,7 @@ vim.o.clipboard = 'unnamedplus'
 require('luasnip.loaders.from_vscode').lazy_load { paths = { './snippets' } }
 
 require 'config.mappings'
+require 'config.functions'
 require 'config.options'
 require 'config.autocommands'
 
